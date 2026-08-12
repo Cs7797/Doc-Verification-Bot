@@ -1,0 +1,402 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="948.4000000000001,3858.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="formaddress" />
+      <Variable x:TypeArguments="x:String" Name="extractedaddress" />
+      <Variable x:TypeArguments="x:String" Name="cleantext" />
+      <Variable x:TypeArguments="x:String" Name="docuVar" />
+      <Variable x:TypeArguments="x:String" Name="aadhaarfile" />
+      <Variable x:TypeArguments="x:String" Name="appno" />
+      <Variable x:TypeArguments="x:String" Name="formgender" />
+      <Variable x:TypeArguments="x:String" Name="formdob" />
+      <Variable x:TypeArguments="x:String" Name="formname" />
+      <Variable x:TypeArguments="x:String" Name="formaadhaar" />
+      <Variable x:TypeArguments="x:String" Name="extractedgender" />
+      <Variable x:TypeArguments="x:String" Name="extracteddob" />
+      <Variable x:TypeArguments="x:String" Name="extractedname" />
+      <Variable x:TypeArguments="x:String" Name="extractedAadhaar" />
+      <Variable x:TypeArguments="x:String" Name="formtext" />
+      <Variable x:TypeArguments="x:String" Name="aadhartext" />
+      <Variable x:TypeArguments="x:String" Name="formfile" />
+      <Variable x:TypeArguments="s:String[]" Name="aadhaarfiles" />
+      <Variable x:TypeArguments="sd2:DataTable" Name="dtresults" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="init" sap:VirtualizedContainerService.HintSize="553.6,175.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="result" />
+        <Variable x:TypeArguments="x:String" Name="idcheck" />
+        <Variable x:TypeArguments="x:String" Name="addresscheck" />
+        <Variable x:TypeArguments="x:String" Name="gendercheck" />
+        <Variable x:TypeArguments="x:String" Name="dobcheck" />
+        <Variable x:TypeArguments="x:String" Name="namecheck" />
+        <Variable x:TypeArguments="x:String" Name="finalresult" />
+        <Variable x:TypeArguments="x:String" Name="agecheck" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BuildDataTable DataTable="[dtresults]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;applicationno&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;aadhar_id&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;aadhar_name&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;aadhar_dob&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;aadhar_gender&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;aadhar_address&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;form_name&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;form_id&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;form_gender&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;form_dob&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;form_address&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;namecheck&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;idcheck&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;dobcheck&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;gendercheck&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;addresscheck&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;result&lt;/Column1&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    </Sequence>
+    <Assign DisplayName="path" sap:VirtualizedContainerService.HintSize="553.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[aadhaarfiles]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\UiPathProjects\AadharInput", "*.png")]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Sequence DisplayName="data extraction" sap:VirtualizedContainerService.HintSize="553.6,3546.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="C:\UiPathProjects\Temp" Name="tempfolder" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="loop" sap:VirtualizedContainerService.HintSize="520,3463.2" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[aadhaarfiles]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="aadhaarfile" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518.4,3341.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="formclean" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,358.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,248" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Required namespaces: System.Drawing, System.Drawing.Imaging, System.IO&#xA;Dim srcPath As String = in_filepath&#xA;If Not System.IO.File.Exists(srcPath) Then&#xA;    out_filepath = String.Empty&#xA;    Return&#xA;End If&#xA;&#xA;' Ensure temp folder exists&#xA;If Not System.IO.Directory.Exists(temp_folder) Then&#xA;    System.IO.Directory.CreateDirectory(temp_folder)&#xA;End If&#xA;&#xA;Dim outPath As String = System.IO.Path.Combine(temp_folder, System.IO.Path.GetFileNameWithoutExtension(srcPath) &amp; &quot;_pre.png&quot;)&#xA;&#xA;' Load image&#xA;Dim bmpOrig As System.Drawing.Bitmap = CType(System.Drawing.Bitmap.FromFile(srcPath), System.Drawing.Bitmap)&#xA;&#xA;' Step 1: Convert to grayscale&#xA;Dim bmpGray As New System.Drawing.Bitmap(bmpOrig.Width, bmpOrig.Height, System.Drawing.Imaging.PixelFormat.Format24bppRgb)&#xA;For y As Integer = 0 To bmpOrig.Height - 1&#xA;    For x As Integer = 0 To bmpOrig.Width - 1&#xA;        Dim c As System.Drawing.Color = bmpOrig.GetPixel(x, y)&#xA;        ' standard luminance&#xA;        Dim g As Integer = CInt(0.299 * c.R + 0.587 * c.G + 0.114 * c.B)&#xA;        If g &lt; 0 Then g = 0 Else If g &gt; 255 Then g = 255&#xA;        bmpGray.SetPixel(x, y, System.Drawing.Color.FromArgb(g, g, g))&#xA;    Next&#xA;Next&#xA;bmpOrig.Dispose()&#xA;&#xA;' Step 2: Resize (upsample) - makes Tesseract more accurate on small text&#xA;Dim newW As Integer = CInt(Math.Max(1, Math.Round(bmpGray.Width * resizeFactor)))&#xA;Dim newH As Integer = CInt(Math.Max(1, Math.Round(bmpGray.Height * resizeFactor)))&#xA;Dim bmpResized As New System.Drawing.Bitmap(newW, newH)&#xA;Using g As System.Drawing.Graphics = System.Drawing.Graphics.FromImage(bmpResized)&#xA;    g.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic&#xA;    g.DrawImage(bmpGray, 0, 0, newW, newH)&#xA;End Using&#xA;bmpGray.Dispose()&#xA;&#xA;' Step 3: Contrast adjustment (linear stretch around midpoint)&#xA;For y As Integer = 0 To bmpResized.Height - 1&#xA;    For x As Integer = 0 To bmpResized.Width - 1&#xA;        Dim c As System.Drawing.Color = bmpResized.GetPixel(x, y)&#xA;        Dim v As Integer = c.R&#xA;        Dim v2 As Integer = CInt((v - 128) * contrast + 128)&#xA;        If v2 &lt; 0 Then v2 = 0 Else if v2 &gt; 255 Then v2 = 255&#xA;        bmpResized.SetPixel(x, y, System.Drawing.Color.FromArgb(v2, v2, v2))&#xA;    Next&#xA;Next&#xA;&#xA;' Step 4: Simple threshold (global - mean-based). This binarizes to pure black/white.&#xA;Dim total As Long = 0&#xA;For y As Integer = 0 To bmpResized.Height - 1&#xA;    For x As Integer = 0 To bmpResized.Width - 1&#xA;        total += bmpResized.GetPixel(x, y).R&#xA;    Next&#xA;Next&#xA;Dim mean As Integer = CInt(total / (bmpResized.Width * bmpResized.Height))&#xA;&#xA;For y As Integer = 0 To bmpResized.Height - 1&#xA;    For x As Integer = 0 To bmpResized.Width - 1&#xA;        Dim v As Integer = bmpResized.GetPixel(x, y).R&#xA;        If v &gt;= mean Then&#xA;            bmpResized.SetPixel(x, y, System.Drawing.Color.FromArgb(255, 255, 255))&#xA;        Else&#xA;            bmpResized.SetPixel(x, y, System.Drawing.Color.FromArgb(0, 0, 0))&#xA;        End If&#xA;    Next&#xA;Next&#xA;&#xA;' Save processed image&#xA;bmpResized.Save(outPath, System.Drawing.Imaging.ImageFormat.Png)&#xA;bmpResized.Dispose()&#xA;&#xA;out_filepath = outPath&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                      <ui:InvokeCode.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_filepath">[aadhaarfile]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="temp_folder">[tempfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:Double" x:Key="resizeFactor">1.6</InArgument>
+                        <InArgument x:TypeArguments="x:Double" x:Key="contrast">1.4</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_filepath">[processedfile]</OutArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <p:DigitizeDocument DocumentObjectModel="{x:Null}" ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentPath="[aadhaarfile]" DocumentText="[aadhartext]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="484.8,332" sap2010:WorkflowViewState.IdRef="DigitizeDocument_3">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument1>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument1>
+                    <ActivityFunc.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                    </ActivityFunc.Argument2>
+                    <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Rt8zSN5qZrv79jm1I7rR2HLEPV4xvjZSK3JqcHzrIcQzVMfSmiIMcYZKbiVifZVyO8mN4ngBo2ZDDgT8s+VR0w==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[Image]" Language="auto" NoopExecution="False" PredictionId="[PredictionId]" Profile="None" Scale="1" Timeout="100000" />
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+              </p:DigitizeDocument>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[appno]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Path.GetFileNameWithoutExtension(aadhaarfile).Split("_"c)(0)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_16">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[formfile]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Directory.GetFiles("C:\UiPathProjects\FormInput", appno &amp; "*.docx").FirstOrDefault()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Extracted OCR Text: &quot; &amp; aadharText]" />
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[cleantext]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(aadhartext, "[^A-Za-z0-9\s:/]", "")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[cleantext]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cleanText, "\s+", " ")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;CLEAN: &quot; &amp; cleantext]" />
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,115.2" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[extractedAadhaar]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(System.Text.RegularExpressions.Regex.Match(cleanText, "\b\d{4}\D?\d{4}\D?\d{4}\b").Success, _
+   System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Match(cleanText, "\b\d{4}\D?\d{4}\D?\d{4}\b").Value, "\D+", ""), _
+   If(System.Text.RegularExpressions.Regex.Match(cleanText, "\b\d{12}\b").Success, System.Text.RegularExpressions.Regex.Match(cleanText, "\b\d{12}\b").Value, "" ) _
+)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,115.2" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[extracteddob]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(System.Text.RegularExpressions.Regex.Match(cleanText, "(?i)(?:dob|d\/o\/b|date of birth|yob|year of birth|pos)\s*[:\-]?\s*([0-3]?\d[-\/\.][01]?\d[-\/\.](?:19|20)\d{2})").Success, _
+   System.Text.RegularExpressions.Regex.Match(cleanText, "(?i)(?:dob|d\/o\/b|date of birth|yob|year of birth|pos)\s*[:\-]?\s*([0-3]?\d[-\/\.][01]?\d[-\/\.](?:19|20)\d{2})").Groups(1).Value, _
+   If(System.Text.RegularExpressions.Regex.Match(cleanText, "\b[0-3]?\d[-\/\.][01]?\d[-\/\.](?:19|20)\d{2}\b").Success, _
+      System.Text.RegularExpressions.Regex.Match(cleanText, "\b[0-3]?\d[-\/\.][01]?\d[-\/\.](?:19|20)\d{2}\b").Value, _
+      "" _
+   ) _
+)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[extractedgender]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[If(System.Text.RegularExpressions.Regex.Match(cleanText, "(?i)\b(male|female|m|f)\b").Success, System.Text.RegularExpressions.Regex.Match(cleanText, "(?i)\b(male|female|m|f)\b").Value, "")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[extractedgender]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[extractedgender.ToUpper()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[extractedname]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(cleanText, "(?:(?:ArRI|ARRI|ARER)\s+ans\s+\d+\s+|(?:qla)\s+|(?:Aam\s+PP\s+erg)\s+)(.+?)(?:\s*3rR\s+ff|\s*UfH|/|DOB|MALE|FEMALE|\s*OPR\s+fef)").Groups(1).Value.Trim()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[extractedaddress]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Regex.Match(cleanText, "(?&lt;=Address:).*?\d{6}", RegexOptions.Singleline).Value.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Delay Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <p2:WordApplicationScope SensitivityLabel="{x:Null}" DisplayName="Word Application Scope" FilePath="[formfile]" sap:VirtualizedContainerService.HintSize="484.8,872" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2" SensitivityOperation="None">
+                <p2:WordApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WordDocument">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,741.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <p2:WordReadText DisplayName="Read Text" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WordReadText_1" Text="[formtext]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_17">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[formname]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(formtext, "(?&lt;=1\.\s*Name:\s*)(.+?)(?=[\s\S]*2\.\s*Guardian)").Value.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_21">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[formaadhaar]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(formtext, "(?&lt;=2\.\s+Guardian\s+Name\s*:\s*)(\d{4}\s+\d{4}\s+\d{4})").Value.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_18">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[formdob]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(formtext, "(?&lt;=3\.\s+Date\s+of\s+Birth\s*:\s*).+?(?=\s*4\.\s+Blood\s+Group)").Value.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[formgender]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(formtext, "(?&lt;=5\.\s+Gender:\s*)([A-Z]+)").Value.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_20">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[formaddress]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(formtext, "(?&lt;=5\.\s+Permanent\s+Address\s*:\s*)([\s\S]*?)(?=is\s+licensed\s+to\s+drive)").Value.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </p2:WordApplicationScope.Body>
+              </p2:WordApplicationScope>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484.8,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;Name: &quot; + formname+ Environment.NewLine + &#xD;&#xA;&quot;Aadhar ID: &quot; + formaadhaar + Environment.NewLine + &#xD;&#xA;&quot;Date of Birth: &quot; +formdob  + Environment.NewLine + &#xD;&#xA;&quot;Gender: &quot; + formgender + Environment.NewLine + &#xD;&#xA;&quot;Permanent Address: &quot; + formaddress]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
+  </Sequence>
+</Activity>
