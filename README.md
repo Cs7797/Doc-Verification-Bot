@@ -116,7 +116,6 @@ Illustrative result (not an actual run; identifier masked for documentation):
 ## Current limitations
 
 - Extraction patterns depend on the supported document and Word form layouts; unfamiliar or noisy inputs may yield incorrect results.
-- The current matching logic can misclassify incomplete or partial text. Results require human review.
 - Prefix-based file matching may select an unintended form if application references overlap.
 - Errors are logged, but some failed inputs may be absent from the final report.
 - The workflow contains interactive dialogs and uses fixed paths; it is not a production-ready unattended deployment.
@@ -124,15 +123,12 @@ Illustrative result (not an actual run; identifier masked for documentation):
 
 ## Future improvements
 
-- Layout-aware extraction and explicit missing-field checks.
 - More robust field normalization, strict document pairing and review outcomes.
 - Reusable workflows, configuration files, retries and comprehensive test coverage.
 - Masked reporting, sanitized logs and secure external credential storage.
 - Orchestrator integration and unattended execution readiness.
 
-## Privacy and security
 
-Use only synthetic data for development and demonstration. The original code contains an embedded OCR credential; revoke or rotate it, remove it from all workflows and repository history, and configure the replacement securely. The original workflow can also log raw OCR text and export unmasked identifiers. Do not process real identity documents until those issues are addressed.
 
 ## Project purpose
 
